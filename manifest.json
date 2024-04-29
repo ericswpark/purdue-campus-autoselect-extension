@@ -4,16 +4,12 @@
     "version": "1.0",
     "description": "Automatically clicks on your campus every time you load Purdue Brightspace",
     "permissions": [
-        "tabs",
-        "activeTab",
-        "http://*/",
-        "https://*/",
         "storage"
     ],
     "content_scripts": [
         {
             "matches": [
-                "*://purdue.brightspace.com/d2l/login*"
+                "https://purdue.brightspace.com/d2l/login*"
             ],
             "js": [
                 "autoload.js"
