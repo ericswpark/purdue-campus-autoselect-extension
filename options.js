@@ -1,5 +1,11 @@
 function saveOptions(e) {
   e.preventDefault();
+
+  // Patch for Chrome not playing nice
+  if (typeof browser === "undefined") {
+    var browser = chrome;
+  }
+
   browser.storage.sync.set({
     campus: document.querySelector("#campus-selection").value,
   });

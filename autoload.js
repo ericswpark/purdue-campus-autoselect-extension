@@ -44,6 +44,11 @@ function on_pref_fetch(item) {
   autoclick(campus);
 }
 
+// Patch for Chrome not playing nice
+if (typeof browser === "undefined") {
+  var browser = chrome;
+}
+
 // Load saved campus preference
 const campus_pref = browser.storage.sync.get("campus");
 campus_pref.then(on_pref_fetch, on_pref_fetch_error);
