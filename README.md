@@ -9,6 +9,8 @@ This extension autoselects your campus when the Brightspace login page loads, sa
 
 ### The extension won't trigger on the login page until I click on it.
 
-This is because of Manifest V3 rules. Right click on the extension and select the option "Always Allow on purdue.brightspace.com".
+This is because of Manifest V3 rules. Right click on the extension and select the option "Always Allow on purdue.brightspace.com". Then it should work without having to click on the extension icon.
+
+Note that this applies only to Firefox and I have no idea why they don't ask for this permission on install. (On Chrome they just grant this if the manifest declares it.)
 
 ![firefox-permissions-setting](images/firefox-host-permissions.png)
