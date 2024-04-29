@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Purdue Brightspace Campus",
     "version": "1.0",
     "description": "Automatically clicks on your campus every time you load Purdue Brightspace",
