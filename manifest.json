@@ -30,7 +30,8 @@
     },
     "browser_specific_settings": {
         "gecko": {
-            "id": "purdue-brightspace-campus-firefox-addon@ericswpark.com"
+            "id": "purdue-brightspace-campus-firefox-addon@ericswpark.com",
+            "update_url": "https://links.ericswpark.com/purdue-brightspace-campus-extension/firefox/updates.json"
         }
     }
 }
