@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Purdue Brightspace Campus Autoselect",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "Automatically clicks on your campus every time you load Purdue Brightspace",
     "permissions": [
         "storage"
