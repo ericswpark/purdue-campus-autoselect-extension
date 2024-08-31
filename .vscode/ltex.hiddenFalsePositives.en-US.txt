@@ -1,0 +1,2 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QSupported websites:\nBrightspace\niClicker\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QPurdue Campus Autoselect Extension\\E$"}
