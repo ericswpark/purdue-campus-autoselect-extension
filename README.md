@@ -13,7 +13,7 @@ Supported websites:
 
 ### Why does clicking on the Firefox badge lead me to the GitHub Releases page?
 
-See [issue #2](https://github.com/ericswpark/purdue-brightspace-campus-extension/issues/2). The TL;DR is that the extension is not suitable for distribution on AMO because it targets a "limited audience".
+See [issue #2](https://github.com/ericswpark/purdue-campus-autoselect-extension/issues/2). The TL;DR is that the extension is not suitable for distribution on AMO because it targets a "limited audience".
 
 You can install the Firefox extension by clicking on the file with the extension of `.xpi`. Updates will be installed automatically.
 
