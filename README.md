@@ -1,6 +1,6 @@
 # Purdue Campus Autoselect Extension
 
-[![Mozilla Extensions Badge](./images/get-the-addon-mozilla.png)](https://github.com/ericswpark/purdue-brightspace-campus-extension/releases)
+[![Mozilla Extensions Badge](./images/get-the-addon-mozilla.png)](https://github.com/ericswpark/purdue-campus-autoselect-extension/releases)
 [![Chrome Web Store Badge](./images/chrome-web-store-badge.png)](https://chromewebstore.google.com/detail/purdue-brightspace-campus/jehengdhonabgmbamcpjbeaffbfnfdkc)
 
 This extension auto-selects your campus when the login page for different Purdue-related websites load, saving you time.
