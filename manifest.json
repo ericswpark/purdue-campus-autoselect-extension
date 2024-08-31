@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Purdue Campus Autoselect",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Automatically clicks on your campus every time you load Purdue-related websites",
     "permissions": [
         "storage"
