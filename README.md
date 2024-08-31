@@ -19,7 +19,7 @@ You can install the Firefox extension by clicking on the file with the extension
 
 ### On Firefox, the extension won't trigger on the login page until I click on it.
 
-This is because of Manifest V3 rules. Right-click on the extension and select the option "Always Allow on <website name>". Then it should work without having to click on the extension icon.
+This is because of Manifest V3 rules. Right-click on the extension and select the option "Always Allow on \<website name\>". Then it should work without having to click on the extension icon.
 
 Note that this applies only to Firefox and I have no idea why they don't ask for this permission during installation. (On Chrome they just grant this if the manifest declares it.)
 
