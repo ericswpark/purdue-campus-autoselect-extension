@@ -7,7 +7,7 @@ This extension auto-selects your campus when the login page for different Purdue
 
 Supported websites:
 - Brightspace
-- iClicker
+- iClicker Cloud
 
 ## FAQ
 
