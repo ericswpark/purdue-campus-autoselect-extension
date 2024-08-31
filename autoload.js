@@ -5,7 +5,23 @@ const CAMPUS_MAPPING = {
   northwest: "Northwest",
 };
 
+const ICLICKER_CAMPUS_MAPPING = {
+  "west-lafayette": "Purdue University West Lafayette/Indianapolis",
+  northwest: "Purdue University Northwest"
+}
+
 function autoclick(campus) {
+  const url = window.location.href;
+  
+  if (url.startsWith("https://purdue.brightspace.com")) {
+    autoclick_brightspace(campus);
+  }
+  else if (url === "https://student.iclicker.com/#/login") {
+    autoclick_iclicker(campus);
+  }
+}
+
+function autoclick_brightspace(campus) {
   const d2l_block = document.querySelector("d2l-html-block");
   try {
     const campus_button = d2l_block.shadowRoot.querySelectorAll(
@@ -24,7 +40,48 @@ function autoclick(campus) {
         "Shadow DOM not found, page not fully loaded yet. Retrying..."
       );
       setTimeout(() => {
-        autoclick(campus);
+        autoclick_brightspace(campus);
+      }, 1000);
+    } else {
+      throw error;
+    }
+  }
+}
+
+class IncompleteLoadError extends Error {
+  constructor(msg, statusCode) {
+    super(msg);
+    this.statusCode = statusCode;
+    this.name = IncompleteLoadError.name;
+  }
+}
+
+
+function autoclick_iclicker(campus) {
+  const iclicker_fed_list = document.querySelector("select[id='federationList']");
+
+  if (!ICLICKER_CAMPUS_MAPPING.hasOwnProperty(campus)) {
+    console.warn("Your campus is not one of the supported options for iClicker autoloading.");
+    return;
+  }
+
+  try {
+    const purdue_campus_option = Array.from(iclicker_fed_list.querySelectorAll("option")).find(o => o.text === ICLICKER_CAMPUS_MAPPING[campus]);
+    console.log(purdue_campus_option);
+    iclicker_fed_list.value = purdue_campus_option.value;
+
+    // Trigger change event to enable redirect button
+    var change_event = new Event('change');
+    iclicker_fed_list.dispatchEvent(change_event);
+
+    document.querySelector("div[class='institution-redirect'] button").click();
+  } catch (error) {
+    if (error instanceof TypeError) {
+      console.log(
+        `Unable to find the campus option; page may not be fully loaded yet. Retrying...`
+      );
+      setTimeout(() => {
+        autoclick_iclicker(campus);
       }, 1000);
     } else {
       throw error;

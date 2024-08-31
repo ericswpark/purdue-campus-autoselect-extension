@@ -1,15 +1,16 @@
 {
     "manifest_version": 3,
-    "name": "Purdue Brightspace Campus Autoselect",
+    "name": "Purdue Campus Autoselect",
     "version": "1.1.0",
-    "description": "Automatically clicks on your campus every time you load Purdue Brightspace",
+    "description": "Automatically clicks on your campus every time you load Purdue-related websites",
     "permissions": [
         "storage"
     ],
     "content_scripts": [
         {
             "matches": [
-                "https://purdue.brightspace.com/d2l/login*"
+                "https://purdue.brightspace.com/d2l/login*",
+                "https://student.iclicker.com/*"
             ],
             "js": [
                 "autoload.js"
