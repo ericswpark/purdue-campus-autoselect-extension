@@ -1,0 +1,3 @@
+# Ignore generated extension packages
+*.xpi
+*.zip
